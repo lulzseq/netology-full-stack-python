@@ -16,8 +16,7 @@ def check_balanced(lst: list) -> str:
             if my_stack.size() == 0:
                 return 'Your string is not balanced'
             key = my_stack.peek()
-            value = item
-            if d[key] != value:
+            if d[key] != item:
                 return 'Your string is not balanced'
             my_stack.pop()
 
