@@ -25,5 +25,5 @@ class Stack:
     def clear(self) -> None:
         return self.stack.clear()
 
-    def push(self, element) -> None:
+    def push(self, element: int) -> None:
         self.stack.append(element)
