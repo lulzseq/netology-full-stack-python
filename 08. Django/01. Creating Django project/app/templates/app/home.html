@@ -8,6 +8,7 @@
     <h1>Выберите раздел</h1>
     {% for title, url in pages.items %}
         <a href="{{ url }}">{{ title }}</a>
+        <p>Путь: {{ url }}</p>
         <br>
     {% endfor %}
 </body>
