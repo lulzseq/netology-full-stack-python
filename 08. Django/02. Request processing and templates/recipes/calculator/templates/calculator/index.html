@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <title>Рецепты</title>
 </head>
-<body>
-{% for ingredient, amount in recipe.items %}
-    <p>{{ ingredient }}: {{ amount }}</p>
-{% empty %}
-    <p>Такого рецепта не знаю :(</p>
-{% endfor %}
+<body style="padding:30px;">
+<h1>{{ dish_name.capitalize }}:</h1>
+<div style="font-size:20px;">&nbsp;</div>
+<table width="300" border="1" style="border:1px solid;border-collapse:collapse;">
+    {% for ingredient, amount in recipe.items %}
+        <tr>
+            <td style="padding:20px;">
+                <span style="font-size:20px;">{{ ingredient }}</span>
+            </td>
+            <td align="right" style="padding:20px;">
+                <span style="font-size:20px;">{{ amount }}</span>
+            </td>
+        </tr>
+    {% empty %}
+        <p>Такого рецепта не знаю :(</p>
+    {% endfor %}
+</table>
+<form action="{% url 'main' %}" style="padding-top:20px;">
+    <input size="50" type="submit" value="Назад" style="width:300px;height:40px;" />
+</form>
 </body>
 </html>

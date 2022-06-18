@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рецепты</title>
+</head>
+<body style="padding:30px;">
+<h1>Выберите блюдо:</h1>
+<div style="font-size:20px;">&nbsp;</div>
+<table width="300" border="1" style="border:1px solid;border-collapse:collapse;">
+    {% for key in keys %}
+<!--        <tr><td style="padding:20px;"><a href="{{ key }}">{{ key }}</a></td></tr>-->
+        <a href="{{ key }}">
+            <div width="300" style="padding:20px;border:1px solid;border-collapse:collapse;max-width:300px;">
+                <span style="font-size:20px;">{{ key.capitalize }}</span>
+            </div>
+        </a>
+    {% empty %}
+        <p>Такого рецепта не знаю :(</p>
+    {% endfor %}
+</table>
+</body>
+</html>
