@@ -4,7 +4,6 @@ from csv import DictReader
 from django.core.paginator import Paginator
 import os
 from django.conf import settings
-from pprint import pprint
 
 
 def index(request):
