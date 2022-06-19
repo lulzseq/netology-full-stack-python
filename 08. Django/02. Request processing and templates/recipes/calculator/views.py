@@ -32,20 +32,11 @@ DATA = {
 # }
 def recipe(request, meal):
     servings = int(request.GET.get('servings', 1))
-
-    hashtable = dict()
-    for key, val in DATA[meal].items():
-        hashtable[key] = round(val*servings, 2)
-
     context = {
-        'recipe': hashtable,
+        'recipe': {key: round(val*servings, 2) for key, val in DATA[meal].items()},
         'dish_name': str(meal)
     }
-
     return render(request, 'calculator/index.html', context)
 
 def index(request):
-    context = {
-        'keys': DATA.keys()
-    }
-    return render(request, 'calculator/main.html', context)
+    return render(request, 'calculator/main.html', {'keys': DATA.keys()})
