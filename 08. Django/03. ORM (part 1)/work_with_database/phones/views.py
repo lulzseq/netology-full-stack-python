@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Phone
 
@@ -16,16 +17,20 @@ def show_catalog(request):
         context_val = Phone.objects.all().order_by('-price')
     else:
         context_val = Phone.objects.all()
-    context = {
-        'phones': context_val
-    }
-    return render(request, 'catalog.html', context)
+    return render(request, 'catalog.html', {'phones': context_val})
 
 
 def show_product(request, slug):
-    # phones = Phone.objects.all()
-    # product_detail = request.GET.get(slug)
-    # for i in product_detail:
-    #
-    context = {}
+    for p in Phone.objects.all():
+        if p.slug == slug:
+            context = {
+                'phone': {
+                    'name': p.name,
+                    'image': p.image,
+                    'price': p.price,
+                    'release_date': p.release_date,
+                    'lte_exists': p.lte_exists
+                }
+            }
+    # context = {'phone': Phone.objects.filter(slug=slug)}
     return render(request, 'product.html', context)

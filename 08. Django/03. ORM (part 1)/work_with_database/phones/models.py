@@ -10,4 +10,4 @@ class Phone(models.Model):
     image = models.URLField(max_length=200)
     release_date = models.DateField(default=now())
     lte_exists = models.BooleanField(default=None)
-    slug = AutoSlugField(populate_from='name')
+    slug = AutoSlugField(populate_from='name', unique=True)
