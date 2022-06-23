@@ -21,16 +21,4 @@ def show_catalog(request):
 
 
 def show_product(request, slug):
-    for p in Phone.objects.all():
-        if p.slug == slug:
-            context = {
-                'phone': {
-                    'name': p.name,
-                    'image': p.image,
-                    'price': p.price,
-                    'release_date': p.release_date,
-                    'lte_exists': p.lte_exists
-                }
-            }
-    # context = {'phone': Phone.objects.filter(slug=slug)}
-    return render(request, 'product.html', context)
+    return render(request, 'product.html', {'phone': Phone.objects.filter(slug=slug).first()})

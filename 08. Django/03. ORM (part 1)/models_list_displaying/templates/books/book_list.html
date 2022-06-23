@@ -7,18 +7,14 @@
         <div class="header">
             <h1><a href="/books">Каталог</a></h1>
         </div>
+        {% for book in book_list %}
         <div class="row">
             <div class="book col-md-4">
-                <h2>Сияние</h2>
-                <p>Автор: Стивен Кинг</p>
-                <p>Дата публикации: 2018-09-10</p>
-
+                <a href="{% url 'book_list' %}"><h2>{{ book.name }}</h2></a>
+                <p>Автор: {{ book.author }}</p>
+                <p>Дата публикации: {{ book.pub_date }}</p>
             </div>
-            <div class="book col-md-4">
-                <h2>1984</h2>
-                <p>Автор: Джордж Оруэл</p>
-                <p>Дата публикации: 2015-03-11</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
