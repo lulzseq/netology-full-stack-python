@@ -7,12 +7,12 @@
         <div class="header">
             <h1><a href="/books">Каталог</a></h1>
         </div>
-        {% for book in book_list %}
         <div class="row">
+            {% for book in book_list %}
             <div class="book col-md-4">
-                <a href="{% url 'book_list' %}"><h2>{{ book.name }}</h2></a>
+                <h2>{{ book.name }}</h2>
                 <p>Автор: {{ book.author }}</p>
-                <p>Дата публикации: {{ book.pub_date }}</p>
+                <p>Дата публикации:</p><a href="{% url 'book_detail' book_detail.pub_date %}">{{ book.pub_date }}</a>
             </div>
             {% endfor %}
         </div>

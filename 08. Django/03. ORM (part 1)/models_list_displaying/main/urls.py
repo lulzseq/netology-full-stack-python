@@ -13,15 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path
 from django.views.generic.base import RedirectView
 
-from books.views import book_list, book_view
+from books.views import book_list, book_detail
+from books.converters import PubDateConverter
+from django.urls import path, register_converter
+
+register_converter(PubDateConverter, 'date')
 
 urlpatterns = [
     path('', RedirectView.as_view(url='books/', permanent=False)),
     path('admin/', admin.site.urls),
     path('books/', book_list, name='book_list'),
-    path('books/<pub_date>', book_view, name='book_view'),
+    path('books/<date:pub_date>/', book_detail, name='book_detail'),
 ]
