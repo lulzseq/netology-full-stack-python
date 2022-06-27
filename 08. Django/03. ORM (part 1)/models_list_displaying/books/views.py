@@ -20,7 +20,7 @@ def book_detail(request, pub_date):
         previous_date = all_dates[index - 1]
     else:
         previous_date = None
-
+    print(previous_date, next_date)
     books = Book.objects.filter(pub_date=pub_date)
     context = {
         'next_date': next_date,

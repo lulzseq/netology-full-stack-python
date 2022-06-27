@@ -12,15 +12,15 @@
             <div class="book col-md-4">
                 <h2>{{ book.name }}</h2>
                 <p>Автор: {{ book.author }}</p>
-                <p>Дата публикации: <a href="{% url 'book_detail' book.pub_date %}">{{ book.pub_date|date:'Y-m-d' }}</a></p>
+                <p>Дата публикации: <a href="{% url 'books' book.pub_date %}">{{ book.pub_date|date:'Y-m-d' }}</a></p>
             </div>
             {% endfor %}
         </div>
         {% if previous_date %}
-            <a href="{{ previous_date|date:'Y-m-d' }}"><--{{ previous_date|date:'Y-m-d' }}</a>
+            <a href="{{ previous_date }}"><-- {{ previous_date }}</a>
         {% endif %}
         {% if next_date %}
-            <a href="{{ next_date|date:'Y-m-d' }}">{{ next_date|date:'Y-m-d' }}--></a>
+            <a href="{{ next_date }}">{{ next_date }} --></a>
         {% endif %}
     </div>
 {% endblock %}

@@ -27,5 +27,5 @@ urlpatterns = [
     path('', RedirectView.as_view(url='books/', permanent=False)),
     path('admin/', admin.site.urls),
     path('books/', book_list),
-    path('books/<date:pub_date>/', book_detail, name='book_detail'),
+    path('books/<date:pub_date>/', book_detail, name='books'),
 ]
