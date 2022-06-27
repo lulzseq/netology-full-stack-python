@@ -8,5 +8,5 @@ class PubDateConverter:
     def to_python(self, value):
         return datetime.strptime(value, self.format)
 
-    def to_url(self, value):  # why value is empty?
+    def to_url(self, value):
         return value.strftime(self.format)

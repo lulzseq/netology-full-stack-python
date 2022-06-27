@@ -19,13 +19,13 @@ from django.views.generic.base import RedirectView
 
 from books.views import book_list, book_detail
 from books.converters import PubDateConverter
-from django.urls import path, register_converter
+from django.urls import path, register_converter, include
 
 register_converter(PubDateConverter, 'date')
 
 urlpatterns = [
     path('', RedirectView.as_view(url='books/', permanent=False)),
     path('admin/', admin.site.urls),
-    path('books/', book_list, name='book_list'),
+    path('books/', book_list),
     path('books/<date:pub_date>/', book_detail, name='book_detail'),
 ]
