@@ -3,7 +3,7 @@ from .models import Book
 
 
 def book_detail(request, pub_date):
-    return render(request, 'books/book_view.html', {'book_detail': Book.objects.all().filter(pub_date=pub_date)})
+    return render(request, 'books/book_detail.html', {'book_detail': Book.objects.all().filter(pub_date=pub_date)})
 
 
 def book_list(request):
