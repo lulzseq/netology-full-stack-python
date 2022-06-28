@@ -17,10 +17,10 @@
             {% endfor %}
         </div>
         {% if previous_date %}
-            <a href="{{ previous_date }}"><-- {{ previous_date }}</a>
+            <a href="http://{{ request.get_host }}/books/{{ previous_date }}"><-- {{ previous_date }}</a>
         {% endif %}
         {% if next_date %}
-            <a href="{{ next_date }}">{{ next_date }} --></a>
+            <a href="http://{{ request.get_host }}/books/{{ next_date }}">{{ next_date }} --></a>
         {% endif %}
     </div>
 {% endblock %}
