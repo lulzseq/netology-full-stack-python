@@ -9,7 +9,7 @@ class SensorAdmin(admin.ModelAdmin):
 
 class MeasurementAdmin(admin.ModelAdmin):
     model = Measurement
-    list_display = ['id', 'temperature', 'created_at']
+    list_display = ['id', 'temperature', 'created_at', 'image']
 
 
 admin.site.register(Sensor, SensorAdmin)

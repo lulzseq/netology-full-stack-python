@@ -9,9 +9,11 @@ class SensorSerializer(serializers.ModelSerializer):
 
 
 class MeasurementSerializer(serializers.ModelSerializer):
+    image = serializers.ImageField(required=False, max_length=None, allow_empty_file=True, use_url=True)
+
     class Meta:
         model = Measurement
-        fields = ['sensor', 'temperature', 'created_at']
+        fields = ['sensor', 'temperature', 'created_at', 'image']
 
 
 class SensorDetailSerializer(serializers.ModelSerializer):
