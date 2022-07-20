@@ -1,10 +1,11 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.decorators import action
+from rest_framework.exceptions import ValidationError
 from rest_framework.permissions import IsAuthenticated, BasePermission
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from .models import Advertisement, Favourite
-from .serializers import AdvertisementSerializer, FavouriteSerializer
+from .serializers import AdvertisementSerializer
 from .filters import AdvertisementFilter
 
 
@@ -34,9 +35,17 @@ class AdvertisementViewSet(ModelViewSet):
             return [GetAccessPermission()]
         return []
 
-    @action(detail=True, methods=['GET'], url_path=f'fav')
+    @action(detail=True, methods=['POST'], url_path=r'fav')
     def fav(self, request, pk=None):
         advertisement = self.get_object()
+        advertisement_in_favourites = Favourite.objects.filter(user=self.request.user).filter(
+            advertisement=advertisement.id)
+
+        if advertisement.draft:
+            raise ValidationError({'error': 'You cannot add draft to fav'})
+
+        if advertisement_in_favourites.exists():
+            raise ValidationError({'error': 'Adv already have in fav'})
 
         if advertisement.creator == self.request.user:
             return Response({'status': 'You cannot add your own ads'})
@@ -44,12 +53,3 @@ class AdvertisementViewSet(ModelViewSet):
         advertisement.favourite.add(self.request.user)
         advertisement.save()
         return Response({'status': f'advertisement #{advertisement.id} was added in favourites'})
-
-
-class FavouriteViewSet(ModelViewSet):
-    serializer_class = FavouriteSerializer
-    filter_backends = [DjangoFilterBackend]
-    permission_classes = [IsAuthenticated]
-
-    def get_queryset(self):
-        return Favourite.objects.filter(user=self.request.user)

@@ -29,26 +29,3 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         if adv_count > 10:
             raise serializers.ValidationError('Too many advertisements.')
         return data
-
-
-class FavouriteSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Favourite
-        fields = ['id']
-
-    def validate(self, attrs):
-        user = self.context['request'].user
-        advertisement = attrs['advertisement']
-        creator = attrs['advertisement'].creator
-        advertisement_in_favourites = Favourite.objects.filter(user=user).filter(advertisement=attrs['advertisement'])
-
-        if advertisement.draft:
-            raise ValidationError({'error': 'You cannot add draft to fav'})
-
-        if advertisement_in_favourites.exists():
-            raise ValidationError({'error': 'Adv already have in fav'})
-
-        if user == creator:
-            raise ValidationError({'error': 'Your own adv cannot be in fav'})
-
-        return attrs
