@@ -1,0 +1,2 @@
+[run]
+omit = tests/*, .venv/*, django_testing/*, *test.py, manage.py
