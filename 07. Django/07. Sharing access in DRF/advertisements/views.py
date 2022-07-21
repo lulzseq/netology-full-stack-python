@@ -21,11 +21,10 @@ class AdvertisementViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend]
 
     def get_queryset(self):
+        queryset = Advertisement.objects.filter(status__in=["OPEN", "CLOSED"])
         if self.request.user.is_authenticated:
-            queryset = Advertisement.objects.filter(creator=self.request.user,
-                                                    draft=True) | Advertisement.objects.filter(draft=False)
-        else:
-            queryset = Advertisement.objects.filter(draft=False)
+            draft = Advertisement.objects.filter(creator=self.request.user, status="DRAFT")
+            return queryset | draft
         return queryset
 
     def get_permissions(self):

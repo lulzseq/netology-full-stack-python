@@ -6,6 +6,7 @@ from rest_framework.authtoken.admin import User
 class AdvertisementStatusChoices(models.TextChoices):
     OPEN = "OPEN", "Открыто"
     CLOSED = "CLOSED", "Закрыто"
+    DRAFT = "DRAFT", "Черновик"
 
 
 class Advertisement(models.Model):
