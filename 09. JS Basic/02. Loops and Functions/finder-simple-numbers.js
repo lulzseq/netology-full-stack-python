@@ -1,13 +1,14 @@
 function check_simple(number) {
-    let flag = false
-    for (let i = 2; number/2 + 1; i++) {
-        if (number % i == 0) {
-            flag = true
-            return false
+
+    if (number > 1) {
+        for (let i = 2; i < number/2 + 1; i++) {
+            if (number % i === 0) {
+                return false
+            }
         }
-    if (!flag) {
         return true
-    }
+    } else {
+        return false
     }
 }
 
