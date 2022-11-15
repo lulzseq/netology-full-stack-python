@@ -16,11 +16,13 @@ class Solution(object):
     @timeit
     def func(self, n):
         def check_simple(number):
-            for i in range(2, int(number/2)+1):
-                if number % i == 0:
-                    return False
-            else:
+            if number > 1:  
+                for i in range(2, number):  
+                    if number % i == 0:  
+                        return False
                 return True
+            else:
+                return False
 
         arr = []
         i = 2
@@ -35,4 +37,4 @@ class Solution(object):
 
 if __name__ == '__main__':
     obj = Solution()
-    print(obj.func(5))
+    print(obj.func(8))
