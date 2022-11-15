@@ -17,7 +17,7 @@ class Solution(object):
     def func(self, n):
         def check_simple(number):
             if number > 1:  
-                for i in range(2, number):  
+                for i in range(2, int(number/2) + 1):  
                     if number % i == 0:  
                         return False
                 return True
@@ -37,4 +37,4 @@ class Solution(object):
 
 if __name__ == '__main__':
     obj = Solution()
-    print(obj.func(8))
+    print(obj.func(5))
