@@ -1,0 +1,7 @@
+.rotator__case {
+    display: none;
+  }
+  
+  .rotator__case_active {
+    display: inline;
+  }
