@@ -1,0 +1,35 @@
+{
+  "name": "defender-game",
+  "version": "1.0.0",
+  "description": "\"Browser based game\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lulzseq/netology-full-stack-python.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "Dmitry Kuznetsov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lulzseq/netology-full-stack-python/issues"
+  },
+  "homepage": "https://github.com/lulzseq/netology-full-stack-python#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.4"
+  },
+  "dependencies": {
+    "core-js": "^3.27.1"
+  }
+}
