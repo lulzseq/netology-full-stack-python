@@ -15,6 +15,7 @@
             "error",
             "LabeledStatement",
             "WithStatement"
-        ]
+        ],
+        "no-unused-vars": "off"
    }
 }
