@@ -1,0 +1,1 @@
+!function(){"use strict";const t=new class{constructor(t){this.str=t}validateUsername(){return/^[a-zA-Z]([a-zA-Z]|([_-])|([\d](?!\d{3})))*(?<![\d_-])$/.test(this.str)}}("Dmitry123");console.log(`${t} - ${t.validateUsername()}`)}();

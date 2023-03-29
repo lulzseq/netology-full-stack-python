@@ -1,0 +1,1 @@
+!function(){"use strict";console.log(function(t){if(void 0!==t.health){const{health:n}=t;return n>50?"healthy":n<=50&&n>=15?"wounded":"critical"}return null}({name:"Маг",health:90}))}();
