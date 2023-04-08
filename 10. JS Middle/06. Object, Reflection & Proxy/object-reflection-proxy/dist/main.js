@@ -1,1 +1,0 @@
-!function(){"use strict";console.log(function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[];const l=[],n=Object.keys(e).sort().filter((e=>!t.includes(e))),c=t.length>0?[...t,...n]:n;return c.forEach((t=>{Object.prototype.hasOwnProperty.call(e,t)&&l.push({key:t,value:e[t]})})),l}({name:"мечник",health:10,level:2,attack:80,defence:40},["name","level"]))}();
