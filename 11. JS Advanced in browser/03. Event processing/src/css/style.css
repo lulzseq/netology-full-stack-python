@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.table {
+    display: flex;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+
+.cell {
+    width: 98px;
+    height: 98px;
+    border: 1px solid black;
+}
+
+.counter {
+    font-size: 3em;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.picture {
+    background-image: url('../img/goblin.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}

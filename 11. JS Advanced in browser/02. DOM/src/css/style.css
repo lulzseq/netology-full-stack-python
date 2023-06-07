@@ -1,0 +1,14 @@
+#game {
+    display: flex;
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+
+.cell {
+    width: 148px;
+    height: 148px;
+    border: 1px solid black;
+}
