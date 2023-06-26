@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="col-md-5">
+        <h3>Check your credit card number</h3>
+        <ul class="cards list-unstyled">
+            <li><span class="card visa" title="Visa">Visa</span></li>
+            <li><span class="card master" title="Mastercard">Mastercard</span></li>
+            <li><span class="card amex" title="American Express">American Express</span></li>
+            <li><span class="card discover" title="Discover">Discover</span></li>
+            <li><span class="card jcb" title="JCB">JCB</span></li>
+            <li><span class="card diners_club" title="Diners Club">Diners Club</span></li>
+            <li><span class="card mir" title="Mir">MIR</span></li>
+        </ul>
+        <form id="form" class="form-inline" novalidate="novalidate" data-np-intersection-state="visible"
+            data-np-autofill-type="other" data-np-checked="1" data-np-watching="1">
+            <div class="form-group">
+                <input class="form-control col-md-6" id="card_number" name="card_number" type="text"
+                    placeholder="Credit card number" data-original-title="" title="">
+                <a id="submitform" class="btn btn-success submit">Click to Validate</a>
+            </div>
+        </form>
+        <span class="status"></span>
+    </div>
+
+</body>
+
+</html>

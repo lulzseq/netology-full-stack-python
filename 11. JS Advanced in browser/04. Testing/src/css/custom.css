@@ -1,0 +1,112 @@
+.headmast h1 {
+    font-size: 2.5em;
+    margin: 0
+}
+
+.headmast h2 {
+    font-size: 1.8em;
+    margin: 0
+}
+
+h3 {
+    font-size: 1.3em
+}
+
+.headmast {
+    text-align: center
+}
+
+.glyphicon {
+    vertical-align: 0%!important;
+    margin-left: 5px
+}
+
+.justify {
+    text-align: justify
+}
+
+.center {
+    text-align: center
+}
+
+.navbar {
+    margin-bottom: 15px;
+    min-height: 40px
+}
+
+.navbar-brand {
+    padding-top: 10px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 16px
+}
+
+.navbar-brand>img {
+    display: initial
+}
+
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.cards {
+    margin: 10px 0;
+    height: 25px
+}
+
+.cards li {
+    display: block;
+    float: left
+}
+
+.card {
+    float: left;
+    width: 39px;
+    height: 25px;
+    text-indent: -9999px;
+    background-position: 0 0;
+    margin-right: 4px;
+}
+
+#submitform {
+    margin-left: 10px
+}
+
+.card.cdisabled {
+    background-position: 0 -25px;
+    opacity: .3
+}
+
+.card.visa {
+    background-image: url(../img/card-visa.gif)
+}
+
+.card.amex {
+    background-image: url(../img/card-amex.gif)
+}
+
+.card.jcb {
+    background-image: url(../img/card-jcb.gif)
+}
+
+.card.master {
+    background-image: url(../img/card-mastercard.gif)
+}
+
+.card.discover {
+    background-image: url(../img/card-discover.gif)
+}
+
+.card.diners_club {
+    background-image: url(../img/card-diners.gif)
+}
+
+.card.mir {
+    background-image: url(../img/card-mir.gif)
+}
+
+.status {
+    font-size: 20px;
+    color: black;
+}
