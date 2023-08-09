@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HelpDesk</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tickets">
+            <div class="nav-bar">
+                <button class="button new-task" id="new-task">Добавить тикет</button>
+                <button class="update"><img src="./static/update.png" title="Обновить" /></button>
+            </div>
+        </div>
+        <div class="popup__bg">
+            <form class="popup">
+                <div class="popup__title">
+                    <span>Новый тикет</span>
+                </div>
+                <div class="popup__text">
+                    <span>Имя</span>
+                    <textarea class="textarea__short" type="text"></textarea>
+                </div>
+                <div class="popup__text">
+                    <span>Описание</span>
+                    <textarea class="textarea__full" name="message"></textarea>
+                </div>
+                <div class="popup__button">
+                    <button class="close-popup">Отмена</button>
+                    <button class="save">ОK</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

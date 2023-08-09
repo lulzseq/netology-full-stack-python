@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0268d9;
+    color: #fff;
+    margin: 20px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.msg {
+    margin: 20px;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+  }
+  
+  .msg.expanded {
+    padding: 20px;
+    border: 1px dashed black;
+    max-height: 1000px;
+  }

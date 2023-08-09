@@ -1,0 +1,239 @@
+body {
+    margin: 0 auto;
+}
+
+.container {
+    min-width: 500px;
+    width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-bar {
+    height: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.update {
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.update img {
+    width: 22px;
+    opacity: 0.75;
+}
+
+.tickets {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.ticket {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    margin: 10px 0px auto;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+button {
+    min-width: 40px;
+    padding: 0px 20px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.new-task {
+    height: 50px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    border-radius: 8px;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.status {
+    width: 40px;
+    margin: 0px 10px;
+    margin-bottom: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket_text {
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica, Arial, sans-serif;
+
+    margin-bottom: auto;
+    margin-top: 10px;
+}
+
+.name {
+    margin-right: auto;
+}
+
+.description {
+    height: auto;  
+    margin-top: 10px;
+    white-space: pre-line;
+    text-align: left;    
+}
+
+.date {
+    margin-left: auto;
+    padding: 0px 20px;
+    margin-bottom: auto;
+    margin-top: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.edit {
+    width: 40px;
+    margin: 0px 10px;
+    margin-bottom: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove {
+    width: 40px;
+    margin-right: 20px;
+    margin-bottom: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* POP UP */
+
+.popup__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+
+.popup__bg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 500px;
+    padding: 25px;
+    transition: 0.5s all;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+
+.popup__title {
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.popup__text {
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.textarea__short {
+    width: 100%;
+    resize: none;
+    height: auto;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 5px 0px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.textarea__full {
+    width: 100%;
+    resize: none;
+    min-height: 100px;
+    margin: 5px 0px;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.popup__button {
+    margin-left: auto;
+}
+
+.popup button {
+    height: 50px;
+    border-radius: 8px;
+    
+}

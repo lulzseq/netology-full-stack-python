@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "name": "Задача 1 new",
+        "description": "Описание 1",
+        "status": false,
+        "created": "12.07.2023 01:10"
+    },
+    {
+        "id": 1,
+        "name": "Задача 2 - обновлено",
+        "description": "Описание 2 - обновлено",
+        "status": true,
+        "created": "12.07.2023 01:10"
+    },
+    {
+        "id": 2,
+        "name": "Задача 3 new",
+        "description": "Описание",
+        "status": false,
+        "created": "23.07.2023 17:32"
+    }
+]

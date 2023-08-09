@@ -1,0 +1,118 @@
+body {
+    position: relative;
+    display: flex;
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.todo, .progress, .done {
+    width: 20%;
+    background-color: #ebecf0;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid rgb(88, 87, 87);
+    border-radius: 5px;
+}
+
+.add-card {
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+}
+
+.title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.none {
+    display: none;
+}
+
+.todo-in, .progress-in, .done-in {
+    border-radius: 5px;
+}
+
+.card-block {
+    width: 100%;
+}
+
+
+.card-text {
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Times, serif;
+    font-size: 16px;
+}
+
+.btn-block {
+    display: flex;
+}
+
+.btn-add {
+    width: 100px;
+    height: 30px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.btn-remove {
+    width: 28px;
+    height: 28px;
+    margin-left: 10px;
+    background-position: center;
+    background-image: url(../img/remove.png);
+    border-style: none;
+}
+
+.new-div {
+    display: flex;
+    background-color: white;
+    min-height: 20px;
+    word-wrap: break-word;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px -5px;
+    border: 1px solid rgb(105, 105, 105);
+    font-family: Times, serif;
+}
+
+.new-div:hover {
+    cursor: grab;
+}
+
+.new-div-remove {
+    line-height: 18px;
+    width: 18px;
+    height: 18px;
+    color: rgb(88, 88, 88);
+    background-color: rgb(222 219 219);
+    margin-left: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dragged {
+    position: absolute;
+    z-index: 2;
+    border: 1px solid rgb(105, 105, 105);
+    opacity: 0.5;
+    width: 20%;
+    height: 20px;
+    border-radius: 5px;
+    pointer-events: none;
+    background: #fff;
+    cursor: 'grabbing';
+}
+
+.opacity {
+    opacity: 0;
+}
