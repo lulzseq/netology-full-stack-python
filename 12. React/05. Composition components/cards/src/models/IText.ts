@@ -1,0 +1,3 @@
+export IText {
+    text: string
+}

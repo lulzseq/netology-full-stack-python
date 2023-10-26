@@ -1,0 +1,14 @@
+#root {
+  height: 10vh;
+  width: 40vw;
+  
+  margin: auto;
+  margin-top: 20px;
+}
+
+.card-body-stars {
+  list-style-type: none;
+  margin: 20px 0px;
+  border: 1px solid grey;
+  padding: 20px;
+}

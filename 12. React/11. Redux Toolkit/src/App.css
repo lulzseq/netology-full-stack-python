@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cards {
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 0.4rem;
+}
+
+.movie {
+  border: 1px solid gray;
+  border-radius: 10px;
+}

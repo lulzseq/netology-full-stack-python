@@ -1,0 +1,45 @@
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+.button {
+  margin-right: 10px;
+  color: #282c34;
+  background-color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  border: 1px solid #282c34;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: #F5F5F5;
+}
+
+.selected {
+  color: #fff;
+  background-color: #282c34;
+}
+
+.selected:hover {
+  background-color: #282c34;
+}
+
+.projects {
+  margin: 20px;
+  column-count: 3;
+  line-height: 2;
+  column-gap: 0;
+  grid-column-gap: 0;
+}
+
+.project {
+  width: 90%;
+}
+
+.project img {
+  width: 100%;
+}

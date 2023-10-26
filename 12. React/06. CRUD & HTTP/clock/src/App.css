@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 1000px;
+  max-width: 80%;
+  margin: 50px auto;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.add-new-clock {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+
+.input-wrapper label {
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+select,
+.input-wrapper input {
+  padding: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 90%;
+  height: 30px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+select {
+  height: 40px;
+}
+
+.button-add-new-clock {
+  padding: 0.25rem 0.5rem;
+  margin-top: auto;
+  width: 200px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.clocks {
+  display: inline-grid;
+}
+
+.clock__item {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 1rem;
+}
+
+.clock__btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btnDelete {
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}

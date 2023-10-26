@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.posts {
+  flex-wrap: wrap;
+}
+
+.post {
+  display: inline-flex;
+  margin: 10px;
+}
+
+.card {
+  width: 250px;
+}
+
+.card-text {
+  min-height: 50px;
+}
+
+.mb-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  width: 600px !important;
+  min-height: 300px !important;
+  margin: 20px;
+}

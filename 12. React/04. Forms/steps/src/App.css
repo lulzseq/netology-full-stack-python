@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input {
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.form__date,
+.form__distance {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.btnSubmit {
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+.data__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center; 
+}
+
+.data__date,
+.data__distance,
+.data__actions {
+  margin: 0px 30px;
+}
+
+.data__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
+.data__item {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: left; */
+  align-self: center;
+  margin: 5px 0px;
+}
+
+.btnDelete {
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin: 0px 30px;
+}
+
+.item__date {
+  width: 150px;
+  text-align: center;
+}
+
+.item__distance {
+  width: 180px;
+  text-align: center;
+}
