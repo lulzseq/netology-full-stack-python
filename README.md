@@ -1,13 +1,13 @@
-### Программа «Fullstack-разработчик на Python»
-1. Основы языка программирования Python.
-2. Работа с файловой системой в Python.
-3. Работа с внешним API.
-4. Курсовой проект.
-5. Базы данных для python-разработчиков.
-6. Профессиональная работа с Python.
-7. Django: создание функциональных веб-приложений.
-8. HTML и CSS: основы веб-верстки.
-9. JavaScript: основы работы в браузере.
-10. JavaScript: углубленный курс веб-разработки.
-11. Расширенный инструментарий JavaScript в браузере.
-12. React: Библиотека №1 в современной фронтенд-разработке.
+### Fullstack Developer in Python program
+1. basics of Python programming language.
+2. Working with the file system in Python.
+3. Working with external API.
+4. Coursework project.
+5. Databases for python developers.
+6. Professional work with Python.
+7. Django: creating functional web applications.
+8. HTML and CSS: basics of web layout.
+9. JavaScript: basics of working in the browser.
+10. JavaScript: advanced web development course.
+11. Advanced JavaScript tools in the browser.
+12. React: Library #1 in modern frontend development.
